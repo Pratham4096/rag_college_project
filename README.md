@@ -21,33 +21,41 @@ An enterprise-grade Retrieval-Augmented Generation (RAG) application built to ch
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/YOUR_USERNAME/rag-college-project.git](https://github.com/YOUR_USERNAME/rag-college-project.git)
-cd rag-college-project
-2. Set Up the Environment
+git clone [https://github.com/Pratham4096/rag_college_project.git](https://github.com/Pratham4096/rag_college_project.git)
+cd rag_college_project
+```
+
+### 2. Set Up the Environment
 Create a virtual environment and install the required dependencies:
 
-Bash
+```Bash
 python -m venv venv
 venv\Scripts\activate
 pip install fastapi uvicorn streamlit pydantic langchain langchain-google-genai langchain-community langchain-huggingface chromadb pypdf python-dotenv
-3. Add Your API Key
+```
+
+### 3. Add Your API Key
 Create a .env file in the root directory and add your Google Gemini API key:
 
-Plaintext
+```Plaintext
 GOOGLE_API_KEY="your_api_key_here"
-4. Start the Backend Server
+```
+
+### 4. Start the Backend Server
 Open a terminal and run the FastAPI server:
 
-Bash
+```Bash
 python backend/main.py
 The API will be available at http://localhost:8000
+```
 
-5. Start the Frontend Application
+### 5. Start the Frontend Application
 Open a second terminal, ensure the virtual environment is activated, and run:
 
-Bash
+```Bash
 streamlit run frontend/app.py
 The UI will be available at http://localhost:8501
+```
 
 🧠 System Architecture
 Ingestion: PDFs are parsed using PyPDFLoader and split into chunks (1500 chars, 300 overlap) using RecursiveCharacterTextSplitter.
@@ -60,11 +68,3 @@ Retrieval: User queries are vectorized and matched against the database using MM
 
 Generation: Context and queries are passed to Gemini via LangChain prompt templates to synthesize a final, cited response.
 
-
-### **Step 3: Push the README**
-Once you have pasted that in and saved it (don't forget to swap `YOUR_USERNAME` in the clone link to your actual GitHub username!):
-1. Go to your VS Code Source Control tab.
-2. Type a message like: "Added project README documentation."
-3. Click **Commit**, and then click **Sync Changes** (or Push) to send it to GitHub.
-
-Your college project is officially complete, documented, and secured. Would you like me to give you a quick "Demo Script" on exactly what to say when presenting this to your professors to highlight the most impressive technical parts?
