@@ -31,7 +31,7 @@ Create a virtual environment and install the required dependencies:
 ```Bash
 python -m venv venv
 venv\Scripts\activate
-pip install fastapi uvicorn streamlit pydantic langchain langchain-google-genai langchain-community langchain-huggingface chromadb pypdf python-dotenv
+pip install -r requirements.txt
 ```
 
 ### 3. Add Your API Key
@@ -43,18 +43,18 @@ GOOGLE_API_KEY="your_api_key_here"
 
 ### 4. Start the Backend Server
 Open a terminal and run the FastAPI server:
+The API will be available at http://localhost:8000
 
 ```Bash
 python backend/main.py
-The API will be available at http://localhost:8000
 ```
 
 ### 5. Start the Frontend Application
 Open a second terminal, ensure the virtual environment is activated, and run:
+The UI will be available at http://localhost:8501
 
 ```Bash
 streamlit run frontend/app.py
-The UI will be available at http://localhost:8501
 ```
 
 🧠 System Architecture
