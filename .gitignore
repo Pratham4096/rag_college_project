@@ -1,0 +1,15 @@
+# Security
+.env
+
+# Virtual Environment
+venv/
+
+# Database (Don't push heavy ChromaDB folders)
+chroma_db/
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# Uploaded Files
+data/
